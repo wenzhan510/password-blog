@@ -14,9 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('post', 'PostController');
-Route::resource('reply', 'ReplyController');
+Route::get('/post/{post}/password', 'PostController@password')->name('post.password');
+Route::post('/post/{post}/password', 'PostController@passwordlogin')->name('post.password-login');
+Route::post('post/{post}/reply', 'ReplyController@store')->name('reply.store');

@@ -8,14 +8,7 @@
                 <div class="panel-heading">博文中心</div>
                 <div class="panel-body">
                     您已登陆个人博文中心
-                    @foreach($posts as $post)
-                    <div class="h3">
-                        <a href="{{ route('post.show', $post) }}">
-                            <span>《{{ $post->title }}》&nbsp;{{ $post->created_at }}</span>
-                        </a>
-                    </div>
-                    @endforeach
-                    {{ $posts->links() }}
+                    @include('posts._posts')
                     <a href="{{ route('post.create') }}" class="btn btn-primary">写新博文</a>
                 </div>
             </div>
