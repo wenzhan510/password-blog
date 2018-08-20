@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <title>密保博客</title>
 
         <!-- Styles -->
@@ -66,7 +66,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">个人主页</a>
+                        <a href="{{ url('/home') }}">个人中心</a>
                     @else
                         <a href="{{ route('login') }}">登陆</a>
                         <a href="{{ route('register') }}">注册</a>
@@ -78,8 +78,9 @@
                 <div class="title m-b-md">
                     欢迎来到密保博客
                 </div>
-
             </div>
         </div>
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
