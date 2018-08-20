@@ -11,6 +11,8 @@
 |
 */
 
+require __DIR__.'/heroku_db.php';
+
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
